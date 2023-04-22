@@ -9,8 +9,16 @@
 </head>
 <body>
     <div class="app">
-        <div class="time"></div>
-        <div class="player"></div>
+        <div class="time">
+            <button data-time="300">5 Minutes</button>
+            <button data-time="600">10 Minutes</button>
+            <button data-time="1200">20 Minutes</button>
+        </div>
+        <div class="player">
+            <audio class="sound">
+                <source src="./sounds/rain.mp3">
+            </audio>
+        </div>
         <div class="sound"></div>
     </div>
     <script src="index.js"></script>
