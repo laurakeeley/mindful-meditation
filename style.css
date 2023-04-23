@@ -11,7 +11,7 @@
     align-items: center;
 }
 
-.time, .sound, .player {
+.time, .sound-picker, .player {
     height:80%;
     flex:1;
     display: flex;
@@ -49,7 +49,7 @@ video {
 }
 
 .time button,
-.sound button {
+.sound-picker button {
     color: white;
     width: 30%;
     height: 10%;
@@ -65,7 +65,7 @@ video {
     background: white;
 }
 
-.sound button{
+.sound-picker button{
     border: none;
     height: 120px;
     width: 120px;
@@ -73,18 +73,18 @@ video {
     padding: 30px;
 }
 
-.sound button:nth-child(1) {
+.sound-picker button:nth-child(1) {
     background: #4972a1;
 }
 
-.sound button:nth-child(2) {
+.sound-picker button:nth-child(2) {
     background: #a14f49;
 }
 
-.sound button:hover {
+.sound-picker button:hover {
     background: lightgray;
 }
 
-.sound button img {
+.sound-picker button img {
     height: 100%;
 }
