@@ -41,5 +41,50 @@
 }
 
 video {
-    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: -10;
+}
+
+.time button,
+.sound button {
+    color: white;
+    width: 30%;
+    height: 10%;
+    background: none;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+.time button:hover {
+    color: black;
+    background: white;
+}
+
+.sound button{
+    border: none;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    padding: 30px;
+}
+
+.sound button:nth-child(1) {
+    background: #4972a1;
+}
+
+.sound button:nth-child(2) {
+    background: #a14f49;
+}
+
+.sound button:hover {
+    background: lightgray;
+}
+
+.sound button img {
+    height: 100%;
 }
