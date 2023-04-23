@@ -31,6 +31,13 @@ const app = () => {
         checkPlaying(song);
     });
 
+    document.addEventListener('keydown', (event) => {
+        if (event.keyCode === 32) { //spacebar
+            event.preventDefault(); //prevent scroll
+            checkPlaying(song);
+        }
+    });
+
     //select time
     timeSelect.forEach(timeOption => {
         timeOption.addEventListener('click', function () {
