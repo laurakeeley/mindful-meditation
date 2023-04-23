@@ -36,7 +36,7 @@ const app = () => {
         timeOption.addEventListener('click', function () {
             duration = this.getAttribute('data-time');
             console.log(duration);
-            timeDisplay.textContent = `${Math.floor(duration / 60)}:${Math.floor(duration % 60)}`;
+            timeDisplay.textContent = `${Math.floor(duration / 60)}:${formatSeconds(Math.floor(duration % 60))}`;
         })
     });
 
@@ -53,11 +53,15 @@ const app = () => {
         }
     }
 
+    function formatSeconds(seconds) {
+        return seconds < 10 ? "0" + seconds : seconds;
+    }
+
     //animate timer
     song.ontimeupdate = function () {
         let currentTime = song.currentTime;
         let elapsed = duration - currentTime;
-        let seconds = Math.floor(elapsed % 60);
+        let seconds = formatSeconds(Math.floor(elapsed % 60));
         let mintues = Math.floor(elapsed / 60);
         //animate circle
         let progress = outlineLength - (currentTime / duration) * outlineLength;
