@@ -22,7 +22,6 @@ const app = () => {
         soundOption.addEventListener('click', function () {
             song.src = this.getAttribute('data-sound');
             video.src = this.getAttribute('data-video');
-            // checkPlaying(song);
         })
     })
     
@@ -42,7 +41,6 @@ const app = () => {
     timeSelect.forEach(timeOption => {
         timeOption.addEventListener('click', function () {
             duration = this.getAttribute('data-time');
-            console.log(duration);
             timeDisplay.textContent = `${Math.floor(duration / 60)}:${formatSeconds(Math.floor(duration % 60))}`;
         })
     });
